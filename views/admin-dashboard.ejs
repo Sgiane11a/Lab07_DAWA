@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+    <script src="/js/auth-guard.js"></script>
+
+    <nav>
+        <div class="nav-wrapper deep-purple darken-2">
+            <a href="/dashboard" class="brand-logo" style="padding-left: 20px;">Admin Panel</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/profile">Mi Perfil</a></li>
+                <li><a href="/dashboard">User Dashboard</a></li>
+                <li><a href="#" id="logout-button">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 2rem;">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">
+                    <h4>Lista de Usuarios</h4>
+                </span>
+                <p>Aquí se muestran todos los usuarios registrados en el sistema.</p>
+                <div class="divider" style="margin: 20px 0;"></div>
+
+                <table class="striped responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre Completo</th>
+                            <th>Email</th>
+                            <th>Roles</th>
+                            <th>Fecha de Registro</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-table-body">
+                        <tr>
+                            <td colspan="5" class="center-align">Cargando usuarios...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div id="user-details-modal" class="modal">
+        <div class="modal-content">
+            <h4>Detalles del Usuario</h4>
+            <div class="divider"></div>
+            <div id="user-details-content" style="margin-top: 20px;">
+ç            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        </div>
+    </div>
+
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/admin-dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    
+    <script src="/js/auth-guard.js"></script>
+
+    <nav>
+        <div class="nav-wrapper teal">
+            <a href="/dashboard" class="brand-logo" style="padding-left: 20px;">Mi App</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/profile">Mi Perfil</a></li>
+                <li id="admin-dashboard-link" style="display: none;"><a href="/admin/dashboard">Admin Dashboard</a></li>
+                <li><a href="#" id="logout-button">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 2rem;">
+        <div class="card-panel">
+            <h4>Bienvenido, <span id="userName">cargando...</span>!</h4>
+            <p>Este es tu panel de control de usuario.</p>
+        </div>
+    </main>
+    
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
