@@ -22,7 +22,7 @@ app.use(cors());
 
 // MIDDLEWARES PARA PARSEAR EL BODY DE LA PETICIÓN
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // <-- 1. LÍNEA AÑADIDA
+app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
@@ -57,7 +57,10 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect(process.env.MONGODB_URI, { autoIndex: true })
+// Verificamos que la variable esté cargada correctamente
+console.log('Mongo URI:', process.env.MONGO_URI);
+
+mongoose.connect(process.env.MONGO_URI, { autoIndex: true })
     .then( async () => {
         console.log('Mongo connected');
         await seedRoles();
